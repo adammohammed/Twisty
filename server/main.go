@@ -27,16 +27,16 @@ func direction(msg groupmebot.InboundMessage) string {
 func handleConnection(c net.Conn) {
 	for {
 		select {
-			case out, ok := <-queue:
-				      if ok {
-						x := fmt.Sprintf("%c", out)
-						bs := []byte(x)
-						c.Write(bs)
-				      } else {
-					      log.Println("Closed")
-				      }
-			default:
-				      time.Sleep(1 * time.Second)
+		case out, ok := <-queue:
+			if ok {
+				x := fmt.Sprintf("%c", out)
+				bs := []byte(x)
+				c.Write(bs)
+			} else {
+				log.Println("Closed")
+			}
+		default:
+			time.Sleep(1 * time.Second)
 		}
 	}
 }
@@ -70,5 +70,6 @@ func main() {
 	if err != nil {
 		// handle error
 	}
+	// This will accept at most 1 connection
 	handleConnection(conn)
 }
