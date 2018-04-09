@@ -1,0 +1,10 @@
+* Twisty - The chat controlled HackPSU project
+** Server go deps
+#+BEGIN_SRC go
+go get -u -v github.com/adammohammed/groupmebot
+#+END_SRC   
+
+** Client go deps
+#+BEGIN_SRC go
+go get -u -v github.com/jacobsa/go-serial/serial
+#+END_SRC   
