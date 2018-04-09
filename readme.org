@@ -1,10 +1,15 @@
 * Twisty - The chat controlled HackPSU project
-** Server go deps
+** Team Members
+ - Nader Alfares
+ - JJ Columbus
+ - Zach Shaulis
+ 
+** Server go dependencies
 #+BEGIN_SRC go
 go get -u -v github.com/adammohammed/groupmebot
 #+END_SRC   
 
-** Client go deps
+** Client go dependencies
 #+BEGIN_SRC go
 go get -u -v github.com/jacobsa/go-serial/serial
 #+END_SRC   
